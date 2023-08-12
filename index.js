@@ -9,6 +9,7 @@ const app = express();
 authenticate(connection);// Estabelece a conecção com o banco MySQL
 app.use(express.json());// Estabelece o uso do Express
 app.use(cors());// Esrabelece a conecção da API com o FRONT
+app.use(express.static("uploads"));
 app.use(express.urlencoded({extended: true}))
 //Rotas
 const Administrador = require("./database/usuario");
